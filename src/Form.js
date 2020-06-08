@@ -22,9 +22,10 @@ export default class MyForm extends React.Component {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
         form.reset();
-        this.setState({ buttonText: 'Successfully Submitted!' });
+        this.setState({ buttonText: 'Submited' });
+        this.setState({ status: 'SUCCESS' });
       } else {
-        this.setState({ buttonText: 'Error try again later' });
+        this.setState({ status: 'ERROR' });
       }
     };
     xhr.send(data);
@@ -51,13 +52,20 @@ export default class MyForm extends React.Component {
           <input type='email' name='email' required />
         </div>
         <div>
+          <label>Community Name:</label>
+          <input type='text' name='community' required />
+        </div>
+        <div>
           <label>Idea:</label>
           <textarea name='idea' id='idea' required></textarea>
         </div>
         {status === 'SUCCESS' ? (
-          <p>Thanks!</p>
+          <p className='submit-thanks'>Thank You!</p>
         ) : (
           <button className='submit-button'>{this.state.buttonText}</button>
+        )}
+        {status === 'ERROR' && (
+          <p className='submit-thanks'>Ooops! There was an error.</p>
         )}
       </form>
     );

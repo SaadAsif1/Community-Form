@@ -54,7 +54,7 @@ textarea {
   left: 0;
   right: 0;
   padding: 10rem 0;
-  background-color: rgb(54, 102, 207);
+  background-color: #03a87c;
 }
 
 /* Form */
@@ -66,7 +66,7 @@ textarea {
   border-radius: 10px;
   width: 40%;
   background-color: black;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.3);
   margin-bottom: 5rem;
 }
 
@@ -106,6 +106,13 @@ textarea {
   box-shadow: 0 0 0 5px rgba(37, 207, 162, 0.4);
 }
 
+.submit-thanks {
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-bottom: -0.2rem;
+}
+
 /* Modal */
 .modal-body {
   color: black;
@@ -134,7 +141,7 @@ textarea {
 }
 
 .modal-btn {
-  background-color: rgb(54, 102, 207);
+  background-color: #03a87c;
   font-family: 'Roboto', sans-serif;
   color: white;
   border: none;
@@ -146,13 +153,19 @@ textarea {
 
 .modal-btn:hover {
   cursor: pointer;
-  background-color: rgb(137, 174, 255);
+  background-color: #25cfa2;
+}
+
+.modal-btn:focus {
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 207, 162, 0.4);
 }
 
 .modal-top-main-btn {
   padding: 0.5rem;
-  width: 50%;
-  background-color: rgb(54, 102, 207);
+  width: 10rem;
+  background-color: #03a87c;
   color: white;
   border: none;
   border-radius: 5px;
@@ -164,11 +177,11 @@ textarea {
 }
 
 .modal-top-main-btn:hover {
-  background-color: rgb(87, 132, 230);
+  background-color: #25cfa2;
   cursor: pointer;
 }
 
-.modal-btn:focus {
+.modal-top-main-btn:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(37, 207, 162, 0.4);
 }
