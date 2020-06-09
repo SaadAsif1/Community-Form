@@ -10,6 +10,7 @@ export default class MyForm extends React.Component {
     };
   }
 
+  // Submit form functions
   submitForm(ev) {
     ev.preventDefault();
     this.setState({ buttonText: 'Submitting...' });
